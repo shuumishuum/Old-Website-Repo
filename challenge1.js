@@ -52,11 +52,11 @@ if (hours > 12) {
   hours = hours - 12;
 }
 
-//Prints out what the challenge said to display
-//console.log(`Today is : ${currentDay}.\nCurrent time is : ${hours} ${timeSuffix} : ${minutes} : ${seconds}`)
+//finds button in html doc
+let button = document.querySelector('button');
 
-//Made a function that changes the inner text(important property distinction) of the specified element
-function currentDayAndTime () {
+//event to change paragraph content to current date and time
+button.addEventListener('click', function (e){
   let dayAndTime = document.querySelector('p');
   dayAndTime.innerText = `Today is : ${currentDay}.\nCurrent time is : ${hours} ${timeSuffix} : ${minutes} : ${seconds}`;
-}
+})

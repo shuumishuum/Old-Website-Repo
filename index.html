@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="challenge1.js"></script>
+        <script src="challenge1.js" defer></script>
+        <!--Defer is important because it loads the js file after the html file has loaded which is needed because then the js file can reach into the html to find document elements,
+        it can't find document elements if it's loaded before the html file because the html elements haven't loaded yet-->
         <title>Changing Doc Text</title>
     </head>
     <body>
@@ -9,8 +11,8 @@
 
         </header>
         <p>Some example code</p>
-        <!--Calls the function made in the js file-->
-        <button onclick="currentDayAndTime()">Click here!</button>
+        <!--button meant to call event handler-->
+        <button>Click here!</button>
         <footer>
 
         </footer>
