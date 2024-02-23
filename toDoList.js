@@ -9,7 +9,7 @@ addEventListener('DOMContentLoaded', function e () {
         //prevents button from refreshing page
         event.preventDefault();
         //sets a variable for the input box value
-        let newTaskInput = document.querySelector('input').value;
+        let newTaskInput = document.getElementById('addTaskInput').value;
         //creating elements
         const li = document.createElement('li');
         const textInput = document.createElement('span');
