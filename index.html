@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="challenge1.js" defer></script>
-        <!--Defer is important because it loads the js file after the html file has loaded which is needed because then the js file can reach into the html to find document elements,
-        it can't find document elements if it's loaded before the html file because the html elements haven't loaded yet-->
-        <title>Changing Doc Text</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <!--importing js code-->
+        <script src="toDoList.js"></script>
+        <title>ToDo List</title>
+        <!--importing css stylesheet-->
+        <link rel="stylesheet" href="toDoList.css">
+        <link rel="icon" type="image/x-icon" href="favicon (1).ico">
     </head>
     <body>
-        <header>
-
-        </header>
-        <p>Some example code</p>
-        <!--button meant to call event handler-->
-        <button>Click here!</button>
-        <footer>
-
-        </footer>
+        <section id="toDoList">
+            <h1>Tasks</h1>
+            <!-- <textarea rows="1" cols="200" placeholder="What's your goal for today?"></textarea> -->
+            <form>
+                <label for="todaysGoal">Today's Goal:</label>
+                <input type="text" placeholder="What's your goal for today?" id="todaysGoal">
+            </form>
+            <ul>
+                <li>
+                    <span class="task">Wash dishes(example task 1)</span>
+                    <span class="delete">Delete</span>
+                </li>
+                <li>
+                    <span class="task">Clean room(example task 2)</span>
+                    <span class="delete">Delete</span>
+                </li>
+                <li>
+                    <span class="task">Take out trash(example task 3)</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+            <form id="addTask">
+                <input type="text" name="addTask" placeholder="Add a task here!">
+                <button>Add Task</button>
+                <textarea name="otherNotes" id="otherNotes" cols="30" rows="10" placeholder="Did you have any other notes you wanted to write yourself?"></textarea>
+            </form>
+        </section>
     </body>
 </html>
