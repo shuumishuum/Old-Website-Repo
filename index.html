@@ -14,7 +14,7 @@
             <!-- <textarea rows="1" cols="200" placeholder="What's your goal for today?"></textarea> -->
             <form>
                 <label for="todaysGoal">Today's Goal:</label>
-                <input type="text" placeholder="What's your goal for today?" id="todaysGoal">
+                <input type="text" placeholder="What's your goal for today?" id="todaysGoal" autocomplete="off">
             </form>
             <ul>
                 <li>
@@ -31,7 +31,7 @@
                 </li>
             </ul>
             <!-- note to self, when using id's in js, make sure to check if the id pops up on not only elements of the same type, but other nodes as well such as forms -->
-            <form id="addTask">
+            <form id="addTask" autocomplete="off">
                 <input type="text" name="addTask" placeholder="Add a task here!" id="addTaskInput">
                 <button>Add Task</button>
                 <textarea name="otherNotes" id="otherNotes" cols="30" rows="10" placeholder="Did you have any other notes you wanted to write yourself?"></textarea>
