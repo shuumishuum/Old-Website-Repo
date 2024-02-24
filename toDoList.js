@@ -25,6 +25,8 @@ addEventListener('DOMContentLoaded', function e () {
         //changes the text content of the appended children
         textInput.textContent = newTaskInput;
         deleteButton.textContent = 'Delete';
+        //It's as simple as this line of code to reset the add task input box. for some odd reason, you can't just use the already defined variable 😠
+        document.getElementById('addTaskInput').value = '';
     })
 
     // //function that adds delete function to delete buttons. p.s. this is copied exactly from netninja js dom tutorial 10. for some reason, intellisense didnt recommend

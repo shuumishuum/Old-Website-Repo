@@ -12,7 +12,7 @@
 
 #toDoList {
     border: black 10px solid;
-    margin: 30px 30px;
+    margin: 30px 30px 0px 30px;
     height: fit-content;
     padding: 10px 10px 50px 10px;
 }
@@ -60,6 +60,12 @@ textarea {
     /* display: block;
     margin: 10px auto; */
     width: 700px;
+}
+
+#otherOptions {
+    border: solid black 1px;
+    margin: 5px 30px 10px 30px;
+    padding: 10px 10px 10px 10px;
 }
 
 /* input[type='checkbox'] {
