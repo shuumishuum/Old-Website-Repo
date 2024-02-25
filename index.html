@@ -7,43 +7,48 @@
         <!--importing css stylesheet-->
         <link rel="stylesheet" href="toDoList.css">
         <link rel="icon" type="image/x-icon" href="favicon (1).ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
     </head>
     <body>
-        <section id="toDoList">
-            <h1>Tasks</h1>
-            <!-- <textarea rows="1" cols="200" placeholder="What's your goal for today?"></textarea> -->
-            <form>
-                <label for="todaysGoal">Today's Goal:</label>
-                <input type="text" placeholder="What's your goal for today?" id="todaysGoal" autocomplete="off">
-            </form>
-            <ul>
-                <li>
-                    <span class="task">Wash dishes(example task 1)</span>
-                    <input type="checkbox" class="checkBox">
-                    <span class="delete">Delete</span>
-                </li>
-                <li>
-                    <span class="task">Clean room(example task 2)</span>
-                    <span class="delete">Delete</span>
-                </li>
-                <li>
-                    <span class="task">Take out trash(example task 3)</span>
-                    <span class="delete">Delete</span>
-                </li>
-            </ul>
-            <!-- note to self, when using id's in js, make sure to check if the id pops up on not only elements of the same type, but other nodes as well such as forms -->
-            <form id="addTask" autocomplete="off">
-                <input type="text" name="addTask" placeholder="Add a task here!" id="addTaskInput">
-                <button>Add Task</button>
-                <textarea name="otherNotes" id="otherNotes" cols="30" rows="10" placeholder="Did you have any other notes you wanted to write yourself?"></textarea>
-            </form>
+        <section>
+            <div class="toDoList">
+                <h1>Tasks</h1>
+                <!-- <textarea rows="1" cols="200" placeholder="What's your goal for today?"></textarea> -->
+                <form>
+                    <label for="todaysGoal">Today's Goal:</label>
+                    <input type="text" placeholder="What's your goal for today?" id="todaysGoal" autocomplete="off">
+                </form>
+                <ul>
+                    <li>
+                        <span class="task">Wash dishes(example task 1)</span>
+                        <input type="checkbox" class="checkBox">
+                        <span class="delete">Delete</span>
+                    </li>
+                    <li>
+                        <span class="task">Clean room(example task 2)</span>
+                        <span class="delete">Delete</span>
+                    </li>
+                    <li>
+                        <span class="task">Take out trash(example task 3)</span>
+                        <span class="delete">Delete</span>
+                    </li>
+                </ul>
+                <!-- note to self, when using id's in js, make sure to check if the id pops up on not only elements of the same type, but other nodes as well such as forms -->
+                <form id="addTask" autocomplete="off">
+                    <input type="text" name="addTask" placeholder="Add a task here!" id="addTaskInput">
+                    <button>Add Task</button>
+                    <textarea name="otherNotes" id="otherNotes" cols="30" rows="10" placeholder="Did you have any other notes you wanted to write yourself?"></textarea>
+                </form>
+            </div>
         </section>
-        <section id="otherOptions">
-            <form>
-                <label for="checkBoxes">Check Boxes?</label>
-                <input type="checkbox" id="checkBoxes">
-            </form>
+        <section class="otherOptions">
+            <div class="checkBoxes">
+                <form>
+                    <label for="checkBoxes">Check Boxes?</label>
+                    <input type="checkbox" id="checkBox">
+                </form>
+            </div>
         </section>
     </body>
 </html>
