@@ -4,81 +4,149 @@
     src: url(Roboto-Regular.ttf);
 }
 
-* {
+html {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto-Regular';
-    box-sizing: border-box;
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 1rem;
 }
 
-.toDoList {
-    border: black 10px solid;
-    margin: 30px 30px 0px 30px;
-    height: fit-content;
-    padding: 10px 10px 50px 10px;
+@media only screen and (max-width: 600px) {
+
+    body {
+        margin: 10%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .toDoList {
+        margin: 0 auto;
+        border: solid black 3px;
+        padding: 5%;
+    }
+
+    textarea {
+        display: block;
+        width: 90%;
+    }
+
+    span {
+        border: pink 1px solid;
+        text-align: center;
+        border-radius: 20px;
+        margin: 1% 0;
+        background-color: pink;
+        padding: 1%;
+    }
+
+    .task {
+        display: inline-block;
+        width: 65%;
+        word-wrap: break-word;
+        margin-left: -8%;
+    }
+
+    .delete {
+        width: 25%;
+        float: inline-end;
+    }
+
+    #todaysGoal,
+    textarea {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    input,
+    textarea {
+        text-align: center;
+    }
+
+    #addTaskInput {
+        width: 30%;
+    }
+
+    textarea {
+        min-height: 60px;
+        height: 60px;
+    }
 }
 
-ul,
-li {
-    margin: 30px 0px;
-}
+/* @media only screen and (min-width: 768px) {
+} */
 
-h1 {
-    text-align: center;
-}
+@media only screen and (min-width: 1200px) {
+    .toDoList {
+        border: solid black 3px;
+        padding: 2%;
+    }
 
-span {
-    border: black none 3px;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: hsl(0, 36%, 85%);
-}
+    ul {
+        list-style-type: none;
+    }
 
-li {
-    list-style-type: none;
-}
+    textarea {
+        display: block;
+        margin: .5% auto;
+        max-width: 100%;
+        min-height: 20px;
+        height: 50px;
+        max-height: 250px;
+        width: 100%;
+        min-width: 40%;
+        
+    }
 
-.delete {
-    float: right;
-    cursor: pointer;
-}
+    input,
+    textarea {
+        text-align: center;
+        font-family: inherit;
+        font-size: inherit;
+    }
 
-input,
-button,
-textarea {
-    text-align: center;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-textarea {
-    display: block;
-    margin: 30px auto 10px auto;
-    height: 10vh;
-    min-width: 50%;
-    width: 75%;
-    max-width: 100%;
-}
+    #todaysGoal {
+        display: block;
+        margin: 1% 0;
+        width: 100%;
+        padding: .3% 0;
+        border: solid black;
+        border-radius: 1rem;
+    }
 
-#todaysGoal {
-    /*If you wanted the todays goal input box to be in the center of the page and on it's own, uncomment these rules*/
-    /* display: block;
-    margin: 10px auto; */
-    width: 700px;
-}
+    li {
+        margin: 1.5% 0;
+    }
 
-#otherOptions {
-    border: solid black 1px;
-    margin: 5px 30px 10px 30px;
-    padding: 10px 10px 10px 10px;
-}
+    span {
+        border: .3rem solid pink;
+        background-color: pink;
+        border-radius: 1em;
+        padding: .1em;
+    }
 
-input[type='checkbox'] {
-    display: none;
-}
+    .delete {
+        float: inline-end;
+        width: 3.5%;
+        text-align: center;
+        padding: 0 .5em;
+    }
 
-#checkBox {
-    display: initial;
-}
+    .task {
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 80%;
+    }
 
-.checkBoxes {
-    margin: 10px 10px 10px 30px;
+    #todaysGoalLabel {
+        font-weight: 700;
+    }
 }
