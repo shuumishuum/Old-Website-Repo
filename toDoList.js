@@ -39,4 +39,16 @@ addEventListener('DOMContentLoaded', function e () {
             list.removeChild(li);
         }
     })
+
+    //displays checkboxes on side of delete button
+    // let checkBoxes = document.getElementById('checkBoxes');
+
+    // checkBoxes.addEventListener('click', function showCheckBoxes(event){
+    //     let allCheckBoxes = document.getElementsByClassName('checkBox');
+    //     Array.from(allCheckBoxes).forEach(box, {
+    //         box.style.display = 'initial'
+    //     })
+    // })
+
+    // document.querySelector('checkBox').style.display = 'inital';
 });

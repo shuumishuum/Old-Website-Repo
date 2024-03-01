@@ -12,41 +12,39 @@ html {
     font-size: 1rem;
 }
 
+input,
+textarea {
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
 @media only screen and (max-width: 600px) {
 
-    body {
-        margin: 10%;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
     .toDoList {
-        margin: 0 auto;
         border: solid black 3px;
-        padding: 5%;
-    }
-
-    textarea {
-        display: block;
-        width: 90%;
+        padding: 2%;
+        /* margin: 2%; */
     }
 
     span {
         border: pink 1px solid;
         text-align: center;
         border-radius: 20px;
-        margin: 1% 0;
+        margin-top: 1%;
+        margin-bottom: 1%;
         background-color: pink;
         padding: 1%;
     }
 
     .task {
         display: inline-block;
-        width: 65%;
+        width: 50%;
         word-wrap: break-word;
-        margin-left: -8%;
     }
 
     .delete {
@@ -57,23 +55,30 @@ html {
     #todaysGoal,
     textarea {
         display: block;
-        margin: 0 auto;
-        width: 100%;
-        margin-top: 2%;
-    }
-
-    input,
-    textarea {
-        text-align: center;
+        width: 98%;
+        margin: 2% auto 0 auto;
     }
 
     #addTaskInput {
         width: 30%;
+        font-size: .8rem;
     }
 
     textarea {
-        min-height: 60px;
-        height: 60px;
+        min-height: 2.5rem;
+        height: 4.75rem;
+        max-height: 6rem;
+        min-width: 70%;
+        width: 98%;
+        max-width: 98%;
+    }
+
+    ul {
+        /*Somewhere the padding is set to 40px on the left of the ul element. I have no clue where it is lol and I even tried ctrl + f on it
+        as well by looking for '40' and 'padding' but nothing showed up lol. Have no idea why this is, maybe 40px padding to left is default
+        for ul elements. Anyways, am I thankful for webdev tools to help me look at whitespace on pages. Saved my life and other people from
+        a simple headache on stackoverflow lol.*/
+        padding: 0;
     }
 }
 
@@ -99,14 +104,6 @@ html {
         max-height: 250px;
         width: 100%;
         min-width: 40%;
-        
-    }
-
-    input,
-    textarea {
-        text-align: center;
-        font-family: inherit;
-        font-size: inherit;
     }
 
     h1 {
