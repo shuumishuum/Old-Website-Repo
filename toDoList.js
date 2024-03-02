@@ -3,6 +3,8 @@ addEventListener('DOMContentLoaded', function e () {
     //sets variables for the button on the page and the whole task list
     let newTaskButton = document.querySelector('button');
     let list = document.querySelector('ul');
+    let darkMode = document.getElementById('darkMode');
+    let hideWhiteArea = document.getElementById('hideWhiteArea');
 
     //function that adds new tasks to tasklist
     newTaskButton.addEventListener('click', function addNewTask(event) {
@@ -59,6 +61,55 @@ addEventListener('DOMContentLoaded', function e () {
             //adding contenteditable attribute to task element
             task.setAttribute('contenteditable', 'plaintext-only')
         }
+    })
+
+    /*function that makes page dark mode*/
+    darkMode.addEventListener('click', function(event) {
+        //prevent button from refreshing page
+        event.preventDefault();
+        //creating body element for document
+        const body = document.querySelector('body');
+        const border = document.getElementsByClassName('border');
+        const footer = document.querySelector('footer');
+        const images = document.getElementsByClassName('svg');
+        const buttons = document.querySelectorAll('button');
+        const spans = document.querySelectorAll('span');
+        //style body color and background color
+        body.style.color = 'grey';
+        body.style.backgroundColor = 'black';
+        footer.style.backgroundColor = 'black';
+        footer.style.borderColor = 'grey';
+
+
+        Array.from(border).forEach(function(item){
+            item.style.borderColor = 'grey';
+        })
+
+        Array.from(images).forEach(function (image) {
+            image.style.color = 'grey';
+        })
+
+        Array.from(buttons).forEach(function (button) {
+            button.style.color = 'black';
+            button.style.backgroundColor = 'grey';
+        })
+
+        Array.from(spans).forEach(function (span) {
+            span.style.color = 'black';
+            span.style.backgroundColor = 'grey';
+            span.style.borderColor = 'grey';
+        })
+    })
+
+    /*function that lets you hide the text area and current goal*/
+    hideWhiteArea.addEventListener('click', function(e){
+        e.preventDefault();
+
+        const todaysGoal = document.querySelector('form');
+        const textArea = document.querySelector('textarea');
+
+        todaysGoal.style.display = 'none';
+        textArea.style.display = 'none';
     })
 
     // list.addEventListener('click', function(e){

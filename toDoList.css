@@ -52,28 +52,29 @@ ul {
     text-align: left;
 }
 
-.toDoList {
+.border {
     border: solid black 3px;
     padding: 2%;
-    margin: 2%;
+    margin: 2% 2% 1% 2%;
 }
 
 footer {
-    margin: 2%;
-    border: 3px none black;
+    margin: 0 2%;
+    border: 3px solid black;
     padding: 2%;
     font-size: .8rem;
     text-align: center;
     background-color: aqua;
 }
 
-@media only screen and (max-width: 600px) {
+.otherOptions {
+    margin: 1% 2%;
+    padding: 2%;
+    border: 3px solid black;
+    text-align: center;
+}
 
-    /* .toDoList {
-        border: solid black 3px;
-        padding: 2%;
-        margin: 2%;
-    } */
+@media only screen and (max-width: 600px) {
 
     span {
         border: pink 1px solid;
@@ -88,6 +89,7 @@ footer {
         display: inline-block;
         width: 50%;
         word-wrap: break-word;
+        text-align: center;
     }
 
     .delete {
@@ -115,18 +117,9 @@ footer {
         width: 98%;
         max-width: 98%;
     }
-
-    footer {
-        border-radius: 3rem 0;
-    }
 }
 
 @media only screen and (min-width: 600px) {
-    /* .toDoList {
-        border: solid black .3rem;
-        margin: 1%;
-        padding: 1%;
-    } */
 
     textarea {
         display: block;
@@ -165,17 +158,9 @@ footer {
         display: inline-block;
         width: 80%;
     }
-
-    footer {
-        border-radius: 10rem 0;
-    }
 }
 
 @media only screen and (min-width: 768px) {
-    /* .toDoList {
-        border: .3rem black solid;
-        padding: 1%;
-    } */
 
     textarea {
         display: block;
@@ -215,18 +200,9 @@ footer {
         max-width: 70%;
         word-wrap: break-word;
     }
-
-    footer {
-        border-radius:10rem 0;
-    }
 }
 
 @media only screen and (min-width: 1200px) {
-
-    /* .toDoList {
-        border: solid black 3px;
-        padding: 2%;
-    } */
 
     textarea {
         display: block;
@@ -277,9 +253,5 @@ footer {
 
     #todaysGoalLabel {
         font-weight: 700;
-    }
-
-    footer {
-        border-radius: 10rem 0;
     }
 }
