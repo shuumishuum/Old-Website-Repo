@@ -26,7 +26,7 @@ textarea {
     font-size: inherit;
 }
 
-span {
+.delete {
     text-align: center;
 }
 
@@ -43,17 +43,37 @@ ul {
         doesn't set the padding of this element to 0. Well, more tidbits to remember to help*/
 }
 
-.delete {
+.delete,
+.svg {
     cursor: pointer;
+}
+
+.task {
+    text-align: left;
+}
+
+.toDoList {
+    border: solid black 3px;
+    padding: 2%;
+    margin: 2%;
+}
+
+footer {
+    margin: 2%;
+    border: 3px none black;
+    padding: 2%;
+    font-size: .8rem;
+    text-align: center;
+    background-color: aqua;
 }
 
 @media only screen and (max-width: 600px) {
 
-    .toDoList {
+    /* .toDoList {
         border: solid black 3px;
         padding: 2%;
         margin: 2%;
-    }
+    } */
 
     span {
         border: pink 1px solid;
@@ -66,7 +86,7 @@ ul {
 
     .task {
         display: inline-block;
-        width: 60%;
+        width: 50%;
         word-wrap: break-word;
     }
 
@@ -95,14 +115,18 @@ ul {
         width: 98%;
         max-width: 98%;
     }
+
+    footer {
+        border-radius: 3rem 0;
+    }
 }
 
 @media only screen and (min-width: 600px) {
-    .toDoList {
+    /* .toDoList {
         border: solid black .3rem;
         margin: 1%;
         padding: 1%;
-    }
+    } */
 
     textarea {
         display: block;
@@ -141,13 +165,17 @@ ul {
         display: inline-block;
         width: 80%;
     }
+
+    footer {
+        border-radius: 10rem 0;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    .toDoList {
+    /* .toDoList {
         border: .3rem black solid;
         padding: 1%;
-    }
+    } */
 
     textarea {
         display: block;
@@ -187,14 +215,18 @@ ul {
         max-width: 70%;
         word-wrap: break-word;
     }
+
+    footer {
+        border-radius:10rem 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
 
-    .toDoList {
+    /* .toDoList {
         border: solid black 3px;
         padding: 2%;
-    }
+    } */
 
     textarea {
         display: block;
@@ -245,5 +277,9 @@ ul {
 
     #todaysGoalLabel {
         font-weight: 700;
+    }
+
+    footer {
+        border-radius: 10rem 0;
     }
 }
