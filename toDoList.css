@@ -5,11 +5,18 @@
 }
 
 html {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 16px;
+    /*Default font related css for the whole doc has to go into an html selector*/
+}
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto-Regular, sans-serif;
+    /*All other general doc styling will go into body*/
     font-size: 1rem;
+    /*Rem is a responsive measure unit based off html font-size*/
 }
 
 input,
@@ -19,8 +26,25 @@ textarea {
     font-size: inherit;
 }
 
+span {
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
+    padding: 0;
+    /*Somewhere the padding is set to 40px on the left of the ul element. I have no clue where it is lol and I even tried ctrl + f on it
+        as well by looking for '40' and 'padding' but nothing showed up lol. Have no idea why this is, maybe 40px padding to left is default
+        for ul elements. Anyways, am I thankful for webdev tools to help me look at whitespace on pages. Saved my life and other people from
+        a simple headache on stackoverflow lol.
+        
+        That was written last night(writing this as of 3/1/2024). Apparently each browser has their own custom css so this is like with
+        margin and padding for body where you have to set them to zero. I have no idea why the body margin and padding being set to zero
+        doesn't set the padding of this element to 0. Well, more tidbits to remember to help*/
+}
+
+.delete {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,12 +52,11 @@ ul {
     .toDoList {
         border: solid black 3px;
         padding: 2%;
-        /* margin: 2%; */
+        margin: 2%;
     }
 
     span {
         border: pink 1px solid;
-        text-align: center;
         border-radius: 20px;
         margin-top: 1%;
         margin-bottom: 1%;
@@ -43,7 +66,7 @@ ul {
 
     .task {
         display: inline-block;
-        width: 50%;
+        width: 60%;
         word-wrap: break-word;
     }
 
@@ -72,27 +95,105 @@ ul {
         width: 98%;
         max-width: 98%;
     }
+}
 
-    ul {
-        /*Somewhere the padding is set to 40px on the left of the ul element. I have no clue where it is lol and I even tried ctrl + f on it
-        as well by looking for '40' and 'padding' but nothing showed up lol. Have no idea why this is, maybe 40px padding to left is default
-        for ul elements. Anyways, am I thankful for webdev tools to help me look at whitespace on pages. Saved my life and other people from
-        a simple headache on stackoverflow lol.*/
+@media only screen and (min-width: 600px) {
+    .toDoList {
+        border: solid black .3rem;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    textarea {
+        display: block;
         padding: 0;
+        margin: 0 auto;
+        min-width: 50%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 2rem;
+        height: 2rem;
+        max-height: 7rem;
+    }
+
+    span {
+        border: pink solid .3rem;
+        background-color: pink;
+        padding: .12rem;
+        border-radius: 1rem;
+    }
+
+    li {
+        margin: 1rem 0;
+    }
+
+    .delete {
+        float: inline-end;
+    }
+
+    .task {
+        display: inline-block;
+        max-width: 70%;
+        word-wrap: break-word;
+    }
+
+    #todaysGoal {
+        display: inline-block;
+        width: 80%;
     }
 }
 
-/* @media only screen and (min-width: 768px) {
-} */
+@media only screen and (min-width: 768px) {
+    .toDoList {
+        border: .3rem black solid;
+        padding: 1%;
+    }
+
+    textarea {
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        min-width: 50%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 2rem;
+        height: 2rem;
+        max-height: 7rem;
+    }
+
+    #todaysGoal {
+        float: inline-end;
+        width: 85%;
+    }
+
+    li {
+        margin: 3.5% 0;
+    }
+
+    span {
+        border: pink .2rem solid;
+        background-color: pink;
+        border-radius: .7rem;
+        padding: .3%;
+    }
+
+    .delete {
+        float: inline-end;
+        width: 6.5%;
+    }
+
+    .task {
+        display: inline-block;
+        max-width: 70%;
+        word-wrap: break-word;
+    }
+}
 
 @media only screen and (min-width: 1200px) {
+
     .toDoList {
         border: solid black 3px;
         padding: 2%;
-    }
-
-    ul {
-        list-style-type: none;
     }
 
     textarea {
@@ -133,7 +234,6 @@ ul {
     .delete {
         float: inline-end;
         width: 3.5%;
-        text-align: center;
         padding: 0 .5em;
     }
 
