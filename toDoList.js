@@ -1,10 +1,14 @@
 //loads all of the DOM content into JS before allowing any JS interaction to prevent uncaught reference errors
 addEventListener('DOMContentLoaded', function e () {
     //sets variables for the button on the page and the whole task list
-    let newTaskButton = document.querySelector('button');
+    let newTaskButton = document.getElementById('newTaskButton');
     let list = document.querySelector('ul');
+    //for some reason, query selector doesn't work for dark mode, so i opted for getelementbyid
     let darkMode = document.getElementById('darkMode');
+    let lightMode = document.getElementById('lightMode');
     let hideWhiteArea = document.getElementById('hideWhiteArea');
+    let showWhiteArea = document.getElementById('showWhiteArea');
+    let closeButton = document.getElementById('closeButton');
 
     //function that adds new tasks to tasklist
     newTaskButton.addEventListener('click', function addNewTask(event) {
@@ -86,7 +90,8 @@ addEventListener('DOMContentLoaded', function e () {
         })
 
         Array.from(images).forEach(function (image) {
-            image.style.color = 'grey';
+            //can't style images color with css unless if you use webkit-filter property. i used invert cause white will show up nice on black background
+            image.setAttribute('style', '-webkit-filter:invert(100%)');
         })
 
         Array.from(buttons).forEach(function (button) {
@@ -101,6 +106,39 @@ addEventListener('DOMContentLoaded', function e () {
         })
     })
 
+    /*function that makes page light mode(inital styling)*/
+    lightMode.addEventListener('click', function(event) {
+        //prevent button from refreshing page
+        event.preventDefault();
+        //creating body element for document
+        const body = document.querySelector('body');
+        const border = document.getElementsByClassName('border');
+        const footer = document.querySelector('footer');
+        const images = document.getElementsByClassName('svg');
+        const buttons = document.querySelectorAll('button');
+        const spans = document.querySelectorAll('span');
+        //style body color and background color
+        body.style = 'inital';
+        footer.style = 'inital';
+
+
+        Array.from(border).forEach(function(item){
+            item.style = 'initial';
+        })
+
+        Array.from(images).forEach(function (image) {
+            image.style = 'initial';
+        })
+
+        Array.from(buttons).forEach(function (button) {
+            button.style = 'initial';
+        })
+
+        Array.from(spans).forEach(function (span) {
+            span.style = 'inital';
+        })
+    })
+
     /*function that lets you hide the text area and current goal*/
     hideWhiteArea.addEventListener('click', function(e){
         e.preventDefault();
@@ -112,23 +150,20 @@ addEventListener('DOMContentLoaded', function e () {
         textArea.style.display = 'none';
     })
 
-    // list.addEventListener('click', function(e){
-    //     if(e.target.getElementById = 'li') {
-    //         let tasks = document.getElementsByClassName('task');
-    //         Array.from(tasks).forEach(function(span) {
-    //             span.setAttribute('contenteditable', 'false')
-    //         })
-    //     }})
+    /*function that lets you re-show the text area and current goal*/
+    showWhiteArea.addEventListener('click', function(e){
+        e.preventDefault();
 
-    //displays checkboxes on side of delete button
-    // let checkBoxes = document.getElementById('checkBoxes');
+        const todaysGoal = document.querySelector('form');
+        const textArea = document.querySelector('textarea');
 
-    // checkBoxes.addEventListener('click', function showCheckBoxes(event){
-    //     let allCheckBoxes = document.getElementsByClassName('checkBox');
-    //     Array.from(allCheckBoxes).forEach(box, {
-    //         box.style.display = 'initial'
-    //     })
-    // })
+        todaysGoal.style.display = 'initial';
+        textArea.style.display = 'revert';
+    })
 
-    // document.querySelector('checkBox').style.display = 'inital';
+    closeButton.addEventListener('click', function(e){
+        let callout = e.target.parentElement;
+        callout.style.display = 'none';
+    })
+
 });

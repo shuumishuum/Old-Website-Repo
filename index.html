@@ -14,43 +14,56 @@
         <section>
             <div class="border">
                 <h1>Tasks</h1>
-                <!-- <textarea rows="1" cols="200" placeholder="What's your goal for today?"></textarea> -->
                 <form>
                     <label for="todaysGoal">Today's Goal:</label>
                     <input type="text" placeholder="What's your goal for today?" id="todaysGoal" autocomplete="off">
                 </form>
                 <ul>
                     <li>
-                        <span class="task">Wash dishes(example task 1)</span>
+                        <span class="task">Wash dishes</span>
                         <!-- <input type="checkbox" class="checkBox"> -->
                         <span class="delete">Delete</span>
                         <img src="editButton.svg" width="20" height="20" class="svg">
                     </li>
                     <li>
-                        <span class="task">Clean room(example task 2)</span>
+                        <span class="task">Clean room</span>
                         <span class="delete">Delete</span>
                         <img src="editButton.svg" width="20" height="20" class="svg">
                     </li>
                     <li>
-                        <span class="task">Take out trash(example task 3)</span>
+                        <span class="task">Take out trash</span>
                         <span class="delete">Delete</span>
                         <img src="editButton.svg" width="20" height="20" class="svg">
                     </li>
                 </ul>
-                <!-- note to self, when using id's in js, make sure to check if the id pops up on not only elements of the same type, but other nodes as well such as forms -->
+                <!--input was originally addtask, made it input cause it was an ez change-->
                 <form id="addTask" autocomplete="off">
                     <input type="text" name="addTask" placeholder="Add a task here!" id="addTaskInput">
-                    <button>Add Task</button>
+                    <button id="newTaskButton">Add Task</button>
                     <textarea name="otherNotes" id="otherNotes" cols="30" rows="10" placeholder="Did you have any other notes you wanted to write yourself?"></textarea>
                 </form>
             </div>
         </section>
         <section class="border">
-                <form>
+                <form id="otherOptions">
+                    <button id="lightMode">Light Mode</button>
                     <button id="darkMode">Dark Mode</button>
+                    <button id="showWhiteArea">Show Goal and Notes</button>
                     <button id="hideWhiteArea">Hide Goal and Notes</button>
                 </form>
         </section>
+        <div class="callout">
+            <div class="calloutHeader">Latest Additions</div>
+            <span id="closeButton">&times;</span>
+            <div class="calloutContent">
+                <ul>
+                    <li>Added a light mode</li>
+                    <li>Added a button to show goal and notes</li>
+                    <li>Added this cool callout box for changelog notes</li>
+                    <li>Got rid of example text cause it looked scuffed at times</li>
+                </ul>
+            </div>
+        </div>
         <footer>
             <div class="footer">
                 <p><em>Vectors and icons by <a href="https://www.figma.com/@thevladc?ref=svgrepo.com" target="_blank">Vlad Cristea</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a></em></p>

@@ -33,18 +33,12 @@ textarea {
 ul {
     list-style-type: none;
     padding: 0;
-    /*Somewhere the padding is set to 40px on the left of the ul element. I have no clue where it is lol and I even tried ctrl + f on it
-        as well by looking for '40' and 'padding' but nothing showed up lol. Have no idea why this is, maybe 40px padding to left is default
-        for ul elements. Anyways, am I thankful for webdev tools to help me look at whitespace on pages. Saved my life and other people from
-        a simple headache on stackoverflow lol.
-        
-        That was written last night(writing this as of 3/1/2024). Apparently each browser has their own custom css so this is like with
-        margin and padding for body where you have to set them to zero. I have no idea why the body margin and padding being set to zero
-        doesn't set the padding of this element to 0. Well, more tidbits to remember to help*/
+    /*Have to set ul padding to 0*/
 }
 
 .delete,
-.svg {
+.svg,
+#closeButton {
     cursor: pointer;
 }
 
@@ -55,7 +49,7 @@ ul {
 .border {
     border: solid black 3px;
     padding: 2%;
-    margin: 2% 2% 1% 2%;
+    margin: 1% 2%;
 }
 
 footer {
@@ -67,11 +61,39 @@ footer {
     background-color: aqua;
 }
 
-.otherOptions {
-    margin: 1% 2%;
-    padding: 2%;
-    border: 3px solid black;
-    text-align: center;
+#otherOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+.callout {
+    border: .5rem solid black;
+    width: 30%;
+    height: 30%;
+    background-color: plum;
+    color:brown;
+    position: fixed;
+    right: 2%;
+    top: 50%;
+}
+
+.calloutHeader {
+    border: .5rem solid black;
+    background-color: black;
+    color: white;
+}
+
+#closeButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.callout li {
+    margin: 5% 1%;
 }
 
 @media only screen and (max-width: 600px) {
